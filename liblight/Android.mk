@@ -1,5 +1,4 @@
-#
-# Copyright (C) 2015 The NamelessRom Project
+# Copyright (C) 2013 The CyanogenMod Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -12,14 +11,17 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
-#
 
-# Inherit from hardware-specific part of the product configuration
-$(call inherit-product, device/oppo/r7/device.mk)
+LOCAL_PATH:= $(call my-dir)
+# HAL module implemenation stored in
+# hw/<COPYPIX_HARDWARE_MODULE_ID>.<ro.board.platform>.so
+include $(CLEAR_VARS)
 
-# Discard inherited values and use our own instead.
-PRODUCT_NAME := nameless_r7
-PRODUCT_DEVICE := r7
-PRODUCT_BRAND := OPPO
-PRODUCT_MANUFACTURER := OPPO
-PRODUCT_MODEL := R7f
+LOCAL_SRC_FILES := lights.c
+LOCAL_MODULE_PATH := $(TARGET_OUT_SHARED_LIBRARIES)/hw
+LOCAL_SHARED_LIBRARIES := liblog libcutils
+
+LOCAL_MODULE := lights.qcom
+LOCAL_MODULE_TAGS := optional
+
+include $(BUILD_SHARED_LIBRARY)
