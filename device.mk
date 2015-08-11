@@ -159,3 +159,6 @@ $(call inherit-product-if-exists, frameworks/native/build/phone-xxhdpi-2048-dalv
 
 # call hwui memory config
 $(call inherit-product-if-exists, frameworks/native/build/phone-xxhdpi-2048-hwui-memory.mk)
+
+# call proprietary counterpart
+-include vendor/oppo/r7/r7-vendor.mk
