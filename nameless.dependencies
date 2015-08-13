@@ -1,6 +1,24 @@
 [
   {
     "remote": "github",
+    "repository": "NamelessRom/android_hardware_qcom_audio",
+    "target_path": "hardware/qcom/audio-caf/msm8916",
+    "revision": "n-2.1-msm8916"
+  },
+  {
+    "remote": "github",
+    "repository": "NamelessRom/android_hardware_qcom_display",
+    "target_path": "hardware/qcom/display-caf/msm8916",
+    "revision": "n-2.1-msm8916"
+  },
+  {
+    "remote": "github",
+    "repository": "NamelessRom/android_hardware_qcom_media",
+    "target_path": "hardware/qcom/media-caf/msm8916",
+    "revision": "n-2.1-msm8916"
+  },
+  {
+    "remote": "github",
     "repository": "NamelessRom/android_kernel_oppo_r7",
     "target_path": "kernel/oppo/r7",
     "revision": "n-2.1"
