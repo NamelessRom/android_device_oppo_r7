@@ -1,0 +1,8 @@
+[
+  {
+    "remote": "github",
+    "repository": "NamelessRom/android_device_oppo_msm8939-common",
+    "target_path": "device/oppo/msm8939-common",
+    "revision": "n-3.0"
+  }
+]
